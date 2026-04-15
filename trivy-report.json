@@ -1,0 +1,198 @@
+{
+  "SchemaVersion": 2,
+  "CreatedAt": "2026-04-15T10:00:00.000000+03:00",
+  "ArtifactName": "https://github.com/Backline-playground/maven-multimodule-nested-test",
+  "ArtifactType": "repository",
+  "Metadata": {
+    "ImageConfig": {
+      "architecture": "",
+      "created": "0001-01-01T00:00:00Z",
+      "os": "",
+      "rootfs": {
+        "type": "",
+        "diff_ids": null
+      },
+      "config": {}
+    }
+  },
+  "Results": [
+    {
+      "Target": "module-api/pom.xml",
+      "Class": "lang-pkgs",
+      "Type": "pom",
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2022-42003",
+          "PkgID": "com.fasterxml.jackson.core:jackson-databind:2.13.0",
+          "PkgName": "com.fasterxml.jackson.core:jackson-databind",
+          "PkgIdentifier": {
+            "PURL": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.13.0",
+            "UID": "a1b2c3d4e5f60001"
+          },
+          "InstalledVersion": "2.13.0",
+          "FixedVersion": "2.13.4.2",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-42003",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Maven",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+          },
+          "Title": "jackson-databind: deep wrapper array nesting wrt UNWRAP_SINGLE_VALUE_ARRAYS",
+          "Description": "In FasterXML jackson-databind before versions 2.13.4.1 and 2.12.17.1, resource exhaustion can occur because of a lack of a check in primitive value deserializers to avoid deep wrapper array nesting, when the UNWRAP_SINGLE_VALUE_ARRAYS feature is enabled.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-502"
+          ],
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-42003",
+            "https://github.com/FasterXML/jackson-databind/issues/3590"
+          ],
+          "PublishedDate": "2022-10-02T05:15:00Z",
+          "LastModifiedDate": "2023-12-20T18:15:00Z"
+        }
+      ]
+    },
+    {
+      "Target": "module-service/pom.xml",
+      "Class": "lang-pkgs",
+      "Type": "pom",
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2022-42889",
+          "PkgID": "org.apache.commons:commons-text:1.9",
+          "PkgName": "org.apache.commons:commons-text",
+          "PkgIdentifier": {
+            "PURL": "pkg:maven/org.apache.commons/commons-text@1.9",
+            "UID": "a1b2c3d4e5f60002"
+          },
+          "InstalledVersion": "1.9",
+          "FixedVersion": "1.10.0",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-42889",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Maven",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+          },
+          "Title": "Apache Commons Text prior to 1.10.0 allows RCE when applied to untrusted input due to insecure interpolation defaults",
+          "Description": "Apache Commons Text performs variable interpolation, allowing properties to be dynamically evaluated and expanded. The standard format for interpolation is \"${prefix:name}\", where \"prefix\" is used to locate an instance of org.apache.commons.text.lookup.StringLookup that performs the interpolation. Starting with version 1.5 and continuing through 1.9, the set of default Lookup instances included interpolators that could result in arbitrary code execution or contact with remote servers.",
+          "Severity": "CRITICAL",
+          "CweIDs": [
+            "CWE-94"
+          ],
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 9.8
+            }
+          },
+          "References": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-42889",
+            "https://lists.apache.org/thread/n2bd4vdsgkqh2tm14jgli6dt3rkbm2lk"
+          ],
+          "PublishedDate": "2022-10-13T13:15:00Z",
+          "LastModifiedDate": "2023-10-17T13:15:00Z"
+        }
+      ]
+    },
+    {
+      "Target": "module-service/sub-service/pom.xml",
+      "Class": "lang-pkgs",
+      "Type": "pom",
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2023-2976",
+          "PkgID": "com.google.guava:guava:31.0.1-jre",
+          "PkgName": "com.google.guava:guava",
+          "PkgIdentifier": {
+            "PURL": "pkg:maven/com.google.guava/guava@31.0.1-jre",
+            "UID": "a1b2c3d4e5f60003"
+          },
+          "InstalledVersion": "31.0.1-jre",
+          "FixedVersion": "32.0.0-jre",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-2976",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Maven",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+          },
+          "Title": "guava: insecure use of temporary directory",
+          "Description": "Use of Java's default temporary directory for file creation in `FileBackedOutputStream` in Google Guava versions 1.0 to 31.1 on Unix systems and Android Ice Cream Sandwich allows other users and apps on the machine with access to the default Java temporary directory to be able to access the files created by the class.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-552"
+          ],
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+              "V3Score": 7.1
+            }
+          },
+          "References": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-2976",
+            "https://github.com/google/guava/issues/2575"
+          ],
+          "PublishedDate": "2023-06-14T18:15:00Z",
+          "LastModifiedDate": "2024-01-20T18:15:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2022-42003",
+          "PkgID": "com.fasterxml.jackson.core:jackson-databind:2.13.0",
+          "PkgName": "com.fasterxml.jackson.core:jackson-databind",
+          "PkgIdentifier": {
+            "PURL": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.13.0",
+            "UID": "a1b2c3d4e5f60004"
+          },
+          "InstalledVersion": "2.13.0",
+          "FixedVersion": "2.13.4.2",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-42003",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Maven",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+          },
+          "Title": "jackson-databind: deep wrapper array nesting wrt UNWRAP_SINGLE_VALUE_ARRAYS",
+          "Description": "In FasterXML jackson-databind before versions 2.13.4.1 and 2.12.17.1, resource exhaustion can occur because of a lack of a check in primitive value deserializers to avoid deep wrapper array nesting, when the UNWRAP_SINGLE_VALUE_ARRAYS feature is enabled.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-502"
+          ],
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-42003",
+            "https://github.com/FasterXML/jackson-databind/issues/3590"
+          ],
+          "PublishedDate": "2022-10-02T05:15:00Z",
+          "LastModifiedDate": "2023-12-20T18:15:00Z"
+        }
+      ]
+    },
+    {
+      "Target": "module-common/pom.xml",
+      "Class": "lang-pkgs",
+      "Type": "pom"
+    }
+  ]
+}
