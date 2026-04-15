@@ -55,41 +55,6 @@
           ],
           "PublishedDate": "2022-10-02T05:15:00Z",
           "LastModifiedDate": "2023-12-20T18:15:00Z"
-        },
-        {
-          "VulnerabilityID": "CVE-2022-42889",
-          "PkgID": "org.apache.commons:commons-text:1.9",
-          "PkgName": "org.apache.commons:commons-text",
-          "PkgIdentifier": {
-            "PURL": "pkg:maven/org.apache.commons/commons-text@1.9",
-            "UID": "a1b2c3d4e5f60002"
-          },
-          "InstalledVersion": "1.9",
-          "FixedVersion": "1.10.0",
-          "Status": "fixed",
-          "Layer": {},
-          "SeveritySource": "ghsa",
-          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-42889",
-          "DataSource": {
-            "ID": "ghsa",
-            "Name": "GitHub Security Advisory Maven",
-            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
-          },
-          "Title": "Apache Commons Text prior to 1.10.0 allows RCE when applied to untrusted input due to insecure interpolation defaults",
-          "Description": "Apache Commons Text performs variable interpolation, allowing properties to be dynamically evaluated and expanded. Starting with version 1.5 and continuing through 1.9, the set of default Lookup instances included interpolators that could result in arbitrary code execution or contact with remote servers.",
-          "Severity": "CRITICAL",
-          "CweIDs": ["CWE-94"],
-          "CVSS": {
-            "ghsa": {
-              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-              "V3Score": 9.8
-            }
-          },
-          "References": [
-            "https://nvd.nist.gov/vuln/detail/CVE-2022-42889"
-          ],
-          "PublishedDate": "2022-10-13T13:15:00Z",
-          "LastModifiedDate": "2023-10-17T13:15:00Z"
         }
       ]
     },
