@@ -11,7 +11,7 @@
     </parent>
 
     <artifactId>module-service</artifactId>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
     <name>Service Module</name>
 
