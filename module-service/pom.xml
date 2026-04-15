@@ -11,25 +11,12 @@
     </parent>
 
     <artifactId>module-service</artifactId>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
-    <name>Service Module</name>
+    <name>Service Module (Aggregator)</name>
 
     <modules>
         <module>sub-service</module>
     </modules>
-
-    <dependencies>
-        <!-- Version inherited from parent dependencyManagement -->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-text</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.backline.test</groupId>
-            <artifactId>module-common</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-    </dependencies>
 
 </project>
