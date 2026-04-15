@@ -17,7 +17,7 @@
   },
   "Results": [
     {
-      "Target": "pom.xml",
+      "Target": "module-api/pom.xml",
       "Class": "lang-pkgs",
       "Type": "pom",
       "Vulnerabilities": [
@@ -43,9 +43,7 @@
           "Title": "jackson-databind: deep wrapper array nesting wrt UNWRAP_SINGLE_VALUE_ARRAYS",
           "Description": "In FasterXML jackson-databind before versions 2.13.4.1 and 2.12.17.1, resource exhaustion can occur because of a lack of a check in primitive value deserializers to avoid deep wrapper array nesting, when the UNWRAP_SINGLE_VALUE_ARRAYS feature is enabled.",
           "Severity": "HIGH",
-          "CweIDs": [
-            "CWE-502"
-          ],
+          "CweIDs": ["CWE-502"],
           "CVSS": {
             "ghsa": {
               "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
@@ -53,8 +51,7 @@
             }
           },
           "References": [
-            "https://nvd.nist.gov/vuln/detail/CVE-2022-42003",
-            "https://github.com/FasterXML/jackson-databind/issues/3590"
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-42003"
           ],
           "PublishedDate": "2022-10-02T05:15:00Z",
           "LastModifiedDate": "2023-12-20T18:15:00Z"
@@ -79,11 +76,9 @@
             "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
           },
           "Title": "Apache Commons Text prior to 1.10.0 allows RCE when applied to untrusted input due to insecure interpolation defaults",
-          "Description": "Apache Commons Text performs variable interpolation, allowing properties to be dynamically evaluated and expanded. The standard format for interpolation is \"${prefix:name}\", where \"prefix\" is used to locate an instance of org.apache.commons.text.lookup.StringLookup that performs the interpolation. Starting with version 1.5 and continuing through 1.9, the set of default Lookup instances included interpolators that could result in arbitrary code execution or contact with remote servers.",
+          "Description": "Apache Commons Text performs variable interpolation, allowing properties to be dynamically evaluated and expanded. Starting with version 1.5 and continuing through 1.9, the set of default Lookup instances included interpolators that could result in arbitrary code execution or contact with remote servers.",
           "Severity": "CRITICAL",
-          "CweIDs": [
-            "CWE-94"
-          ],
+          "CweIDs": ["CWE-94"],
           "CVSS": {
             "ghsa": {
               "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
@@ -91,12 +86,18 @@
             }
           },
           "References": [
-            "https://nvd.nist.gov/vuln/detail/CVE-2022-42889",
-            "https://lists.apache.org/thread/n2bd4vdsgkqh2tm14jgli6dt3rkbm2lk"
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-42889"
           ],
           "PublishedDate": "2022-10-13T13:15:00Z",
           "LastModifiedDate": "2023-10-17T13:15:00Z"
-        },
+        }
+      ]
+    },
+    {
+      "Target": "module-common/pom.xml",
+      "Class": "lang-pkgs",
+      "Type": "pom",
+      "Vulnerabilities": [
         {
           "VulnerabilityID": "CVE-2023-2976",
           "PkgID": "com.google.guava:guava:31.0.1-jre",
@@ -117,11 +118,9 @@
             "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
           },
           "Title": "guava: insecure use of temporary directory",
-          "Description": "Use of Java's default temporary directory for file creation in `FileBackedOutputStream` in Google Guava versions 1.0 to 31.1 on Unix systems and Android Ice Cream Sandwich allows other users and apps on the machine with access to the default Java temporary directory to be able to access the files created by the class.",
+          "Description": "Use of Java's default temporary directory for file creation in FileBackedOutputStream in Google Guava versions 1.0 to 31.1 on Unix systems allows other users and apps on the machine to access the files created by the class.",
           "Severity": "HIGH",
-          "CweIDs": [
-            "CWE-552"
-          ],
+          "CweIDs": ["CWE-552"],
           "CVSS": {
             "ghsa": {
               "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
@@ -129,8 +128,7 @@
             }
           },
           "References": [
-            "https://nvd.nist.gov/vuln/detail/CVE-2023-2976",
-            "https://github.com/google/guava/issues/2575"
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-2976"
           ],
           "PublishedDate": "2023-06-14T18:15:00Z",
           "LastModifiedDate": "2024-01-20T18:15:00Z"
