@@ -31,7 +31,8 @@ public class JsonHelper {
         base.put(Range.closed(90, 100), "critical");
 
         TreeRangeMap<Integer, String> merged = TreeRangeMap.create();
-        merged.putAll(base);
+        RangeMap<Integer, ? extends String> sourceMap = base;
+        merged.putAll(sourceMap);
         return ImmutableRangeMap.copyOf(merged);
     }
 }
