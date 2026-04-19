@@ -20,7 +20,7 @@
         <!-- Centralized dependency versions (customer pattern) -->
         <jackson.version>2.13.0</jackson.version>
         <commons-text.version>1.9</commons-text.version>
-        <guava.version>31.0.1-jre</guava.version>
+        <guava.version>32.0.0-jre</guava.version>
         <slf4j.version>1.7.36</slf4j.version>
     </properties>
 
